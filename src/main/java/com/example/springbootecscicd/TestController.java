@@ -19,7 +19,7 @@ public class TestController {
         String response = "First message from AWS ECS";
 
         if (msg != null && !msg.isBlank()) {
-            response += " - " + msg;
+            response += ",msg=" + msg + " ,clientIp=" + clientIp;
         }
         log.info("getData : remoteIP = {}", clientIp);
         log.info("getData : Response = {}", response);
